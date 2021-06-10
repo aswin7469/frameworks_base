@@ -237,11 +237,7 @@ public class AmbientIndicationContainer extends AutoReinflateContainer implement
         mInfoToSet = null;
 
         if (!TextUtils.isEmpty(mMediaArtist)) {
-            String shortenedTitle = "\"" + mMediaTitle.toString() + "\"";
-            if (shortenedTitle.length() > 20) {
-                shortenedTitle = shortenedTitle.substring(0, 19) + "...\"";
-            }
-            mInfoToSet = String.format(mTrackInfoSeparator, shortenedTitle, mMediaArtist.toString());
+            mInfoToSet = String.format(mTrackInfoSeparator, mMediaTitle.toString(), mMediaArtist.toString());
         } else if (!TextUtils.isEmpty(mMediaTitle)) {
             mInfoToSet = mMediaTitle.toString();
         }
